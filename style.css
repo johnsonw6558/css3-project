@@ -1,0 +1,41 @@
+body {
+    background: url(image.jpeg) no-repeat center fixed; /*The background image is not repeated, centered, and fixed*/
+    background-size: cover; /*The background image covers the entire body*/
+}
+h1 { /* the title*/
+    color: yellow;
+    font-size: 300%;
+    text-align: center; 
+    animation: movein 4s 1; /* the animation of the title that occurs for 4 seconds and once, after the page is loaded*/
+    -webkit-animation: movein 4s 1; /* same thing as the one above but for different browser support*/
+    text-shadow:5px 5px 5px black; /*shadow of the title*/
+}
+@keyframes movein { /* the animation that makes the title fade in and move toward the center*/
+    from {width: 300px; opacity: 0;} 
+    to {width: 100%; opacity: 1;}
+}
+    
+a { /* the different links */
+    color:yellow;
+    font-size: 150%;
+    text-align: center;
+    border-radius: 25px; /* the round borders around the links*/
+    padding: 20px; /* the space between the borders of the different links*/
+    margin: 20px; /*the space between the link and its border */
+    background: linear-gradient(to bottom right, black, red, yellow); /* the different color schemes in each border*/
+    transition: padding 3s, transform 3s; /* the transition effect when the mouse is hovered over the links */
+    -webkit-transition: padding 2s, transform 2s; /* same thing as the one above but for different browser support*/
+    animation: fadein 4s 1; /* the animation of the links that occurs for 4 seconds and once, after the page is loaded*/
+    -webkit-animation: fadein 4s 1; /* same thing as the one above but for different browser support*/
+    box-shadow:5px 5px 5px black; /* shadow of the box*/
+    display:inline-block; /* allows the space between the different links but also allow them to remain on the same line*/ 
+}
+
+@keyframes fadein { /* the animation that makes the links fade in*/
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+a:hover { /* when the mouse hovers over the links the links with its border rotate 360 degrees and the border gets larger*/
+    padding: 50px;
+    transform: rotate(360deg);
+}
